@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bootstrap--- 模态框的相关事件演示</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#myModal").modal("hide");
+		$("#myModal").on("hide.bs.modal",function(){
+			alert("准备关闭modal--->modal关闭之前要执行的代码!");
+		});
+		$("#myModal").on("show.bs.modal",function(){
+			alert("准备显示modal方法---->modal现实之前执行的函数!");
+		});
+		$("#myModal").on("shown.bs.modal",function(){
+			alert("shown.bs.modal----->modal页面已经显示完毕!");
+		});
+		$("#myModal").on("hidden.bs.modal",function(){
+			alert("hidden.bs.modal--->modal已经完全关闭!");
+		});
+	});
+
+</script>
+</head>
+<body>
+	<h1>创建模态框---示例</h1>
+	<button class="btn ntn_primary" data-toggle="modal"
+		data-target="#myModal">开始演示模态框
+	</button>
+	<a data-toggle="modal" href="li.html" data-target="#myModal">请点击我</a>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" arai-hidden="true" data-backdrop="false">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">$times</button>
+					<h4 class="modal-title" id="myModalLabel">模态框标题</h4>
+				</div>
+				<div class="modal-body">模态框文本</div>
+				<div class="modal-fotter">
+					<button type="button" class="btn btn-default" data-dismiss="modal">
+						关闭
+					</button>
+					<button type="button" class="btn btn-primary">
+						提交更改
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

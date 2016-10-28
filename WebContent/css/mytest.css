@@ -1,0 +1,12 @@
+
+#mytable {
+	width: 200px;
+	height: 100px;
+	padding: 12px 13px 20px 23px;
+	margin-left: 20px;
+	collapse: collapse;
+}
+.tweet, .tw {
+	background-color: red;
+	border-top-left-radius: 3px;
+}
