@@ -23,13 +23,14 @@ public class TestCURDByAnno {
 		//CustomerMapperI接口的实现类有sesion.getMapper()动态构建
 		CustomerMapperI mapper = session.getMapper(CustomerMapperI.class);
 		Customer c = new Customer();
-		c.setName("zxf");
-		c.setSex(1);
+		c.setName("xxxx");
+		c.setSex(0);
 		c.setDegree(12.2);
 		int result= mapper.add(c);
 		session.commit();
 		session.close();
-		System.out.println(result);
+		throw new RuntimeException("hello");
+		
 	}
 	@Test
 	public void testGetAll(){
