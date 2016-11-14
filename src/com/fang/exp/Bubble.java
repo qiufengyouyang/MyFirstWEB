@@ -2,6 +2,9 @@ package com.fang.exp;
 
 import java.util.Arrays;
 
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang.math.RandomUtils;
+
 /**
  * 冒泡法排序
  * 
@@ -19,8 +22,10 @@ public class Bubble {
 		int[] array = { 9, 4, 5, 0, 10, 3, 6, 7 };
 		// bubble(array);
 		//selectSort(array);
-		insertSort(array);
-		System.out.println(Arrays.toString(array));
+		//insertSort(array);
+		///System.out.println(Arrays.toString(array));
+		//System.out.println(RandomUtils.nextInt());
+		System.out.println(RandomStringUtils.randomNumeric(6));
 		// quickSort(array, 0, array.length - 1);
 		/*
 		 * int temp; int[] arr = { 6, 3, 8, 9, 1 }; for (int i = 0; i <
