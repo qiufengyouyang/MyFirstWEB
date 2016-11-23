@@ -35,8 +35,9 @@ public class StringUtil {
 		Matcher matcher = pattern.matcher(str);
 		StringBuffer buffer = new StringBuffer();
 		while (matcher.find()) {
-			// 将当前匹配子串替换为指定字符串，并且将替换后的子串以及其之前到上次匹配子串之后的字符串段添加到一个 StringBuffer
-			// 对象里
+			// 将当前匹配子串替换为指定字符串，
+			//并且将替换后的子串以及其之前到上次匹配子串之后的字符串段
+			// 添加到一个 StringBuffer对象里
 			matcher.appendReplacement(buffer, replacement);
 		}
 		// 则将最后一次匹配工作后剩余的字符串添加到一个 StringBuffer 对象里。
@@ -59,8 +60,9 @@ public class StringUtil {
 		Matcher matcher = Pattern.compile("[A-Z]").matcher(str);
 		StringBuilder builder = new StringBuilder(str);
 		for (int i = 0; matcher.find(); i++) {
-			// System.out.println(matcher.start()+".."+matcher.end());
-			builder.replace(matcher.start() + i, matcher.end() + i, "_" + matcher.group().toLowerCase());
+			builder.replace(matcher.start() + i, 
+					matcher.end() + i,
+					"_" + matcher.group().toLowerCase());
 		}
 		if (builder.charAt(0) == '_') {
 			builder.deleteCharAt(0);
@@ -73,7 +75,9 @@ public class StringUtil {
 		Matcher matcher = Pattern.compile("_[a-z]").matcher(str);
 		StringBuilder builder = new StringBuilder(str);
 		for (int i = 0; matcher.find(); i++) {
-			builder.replace(matcher.start() - i, matcher.end() - i, matcher.group().substring(1).toLowerCase());
+			builder.replace(matcher.start() - i,
+					matcher.end() - i, 
+					matcher.group().substring(1).toLowerCase());
 		}
 		if (Character.isUpperCase(builder.charAt(0))) {
 			builder.replace(0, 1, String.valueOf(Character.toLowerCase(builder.charAt(0))));
@@ -127,13 +131,7 @@ public class StringUtil {
 		return displayName;
 	}
 	public static void main(String[] args) {
-		// 3. 分割字符串，""不会被忽略,可以设置分割字符串的数组长度
-		String[] arr = StringUtils.splitByWholeSeparator("aaaa#sss#", "#");
-		System.out.println(Arrays.toString(arr));// [aaaa, sss, ]
-		String[] arr2 = StringUtils.split("aaaa#sss#", "#");
-		System.out.println(Arrays.toString(arr2));// [aaaa, sss, ]
-		System.out.println(camelToUnderline("AbcDweiFww"));
-		System.out.println(toDisplayStyle("abc_adad_fddf","_"));
+
 	}
 
 }
