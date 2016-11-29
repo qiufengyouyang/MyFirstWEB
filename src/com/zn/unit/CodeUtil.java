@@ -19,7 +19,7 @@ public class CodeUtil {
 		try {
 			target = URLEncoder.encode(str, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
+			
 			throw new RuntimeException("编码出错");
 		}
 		return target;

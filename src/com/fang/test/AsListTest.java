@@ -19,7 +19,7 @@ import java.util.List;
  * 获得更新了,因为asList获得List实际引用的就是数组
  */
 public class AsListTest {
-
+	
 	public static void main(String[] args) {
 
 		/* 段落一:基本数据类型使用asList中的问题 */
