@@ -11,7 +11,9 @@ import org.slf4j.LoggerFactory;
  * @since 1.0
  */
 public class ClassUtil {
-
+	public static void main(String[] args) {
+		System.out.println(getClassPath());
+	}
     private static final Logger logger = LoggerFactory.getLogger(ClassUtil.class);
 
     /**

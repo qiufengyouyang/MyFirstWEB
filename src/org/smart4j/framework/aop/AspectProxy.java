@@ -46,7 +46,7 @@ public abstract class AspectProxy implements Proxy {
 
     public void begin() {
     }
-
+    //钩子方法
     public boolean intercept(Class<?> cls, Method method, Object[] params) throws Throwable {
         return true;
     }

@@ -205,6 +205,7 @@ public class DefaultDataAccessor implements DataAccessor {
     public int update(String sql, Object... params) {
         int result;
         try {
+        	//若当前线程中存在连接，则传入（用于事务处理），否则将从数据源中获取连接
             Connection conn = DatabaseHelper.getConnection();
             result = queryRunner.update(conn, sql, params);
         } catch (SQLException e) {

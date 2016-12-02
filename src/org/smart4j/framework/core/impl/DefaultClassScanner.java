@@ -9,12 +9,12 @@ import org.smart4j.framework.core.impl.support.SupperClassTemplate;
 
 /**
  * 默认类扫描器
- *
+ *类扫描
  * @author huangyong
  * @since 2.3
  */
 public class DefaultClassScanner implements ClassScanner {
-
+	//获取指定报名下的所有类
     @Override
     public List<Class<?>> getClassList(String packageName) {
         return new ClassTemplate(packageName) {

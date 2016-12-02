@@ -138,11 +138,11 @@ public class SqlHelper {
         }
         return sql.toString();
     }
-
+    //根据  类名获取表明
     private static String getTable(Class<?> entityClass) {
         return EntityHelper.getTableName(entityClass);
     }
-
+   //添加where条件
     private static String generateWhere(String condition) {
         String where = "";
         if (StringUtil.isNotEmpty(condition)) {
@@ -150,7 +150,7 @@ public class SqlHelper {
         }
         return where;
     }
-
+    //添加排序规则
     private static String generateOrder(String sort) {
         String order = "";
         if (StringUtil.isNotEmpty(sort)) {
